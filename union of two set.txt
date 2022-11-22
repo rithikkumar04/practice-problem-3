@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+class Program
+{
+    static void Main() {
+        int n=Convert.ToInt32(Console.ReadLine());
+        var s = Console.ReadLine().Split(' ');
+        int[] a= new int[n];
+        for(int i=0;i<n;i++)
+        {
+            a[i]= int.Parse(s[i]);
+
+        }
+        int m= Convert.ToInt32(Console.ReadLine());
+        var s2 = Console.ReadLine().Split(' ');
+        int[] b= new int[m];
+        for(int i=0;i<m;i++)
+        {
+            b[i]=int.Parse(s2[i]);
+        }
+        HashSet<int> h = new HashSet<int>();
+
+        for(int i=0;i<n;i++)
+        {
+            h.Add(a[i]);
+        }
+        for(int i=0;i<m;i++)
+        {
+            h.Add(b[i]);
+        }
+        foreach(int val in h)
+        {
+            Console.WriteLine(val);
+        }
+    }
+}
